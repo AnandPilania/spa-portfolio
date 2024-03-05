@@ -4,6 +4,7 @@ import Picture from 'astro/components/Picture.astro';
 
 // layouts
 import Layout from '../layouts/Layout.astro';
+import Container from '../layouts/Container.astro';
 
 // components
 import Button from '../components/Button.astro';
@@ -36,123 +37,130 @@ const CarocelImages = [
 ---
 
 <Layout title='Frontend Mentor | Single-page design portfolio'>
-	<main class='flex flex-col text-center gap-8 md:gap-16 lg:gap-20'>
-		<section>
-			<div class='mx-4 md:mx-11 lg:mx-44'>
-				<h1
-					class='text-heading-2-25 md:text-heading-2-75 lg:text-heading-3-5'>
-					Design solutions made easy
-				</h1><p
-					class='text-body-1 mt-4 mx-8 text-ash-gray md:text-body-1-125 md:mt-7 md:mx-14 lg:mx-40'>
-					With over ten years of experience in various design
-					disciplines, I’m your one-stop shop for your design needs.
-				</p>
-			</div>
-		</section>
-		<section>
-			<div
-				class='grid gap-6 grid-cols-2 md:grid-cols-4 mx-4 md:mx-11 lg:mx-44 lg:grid-cols-6'>
-				<Card
-					Title='Graphic Design'
-					Alt='Graphic Design Card'
-					ImageURL={GraphicDesign}
-					CardClass='bg-deep-purple gap-24 col-span-2 md:row-span-2'
-					ImageClass='h-48 w-32'
-				/>
-				<Card
-					Title='UI/UX'
-					Alt='UI/UX Card'
-					ImageURL={UIUX}
-					CardClass='bg-burnt-orange gap-10 col-span-1 md:row-span-1'
-					ImageClass='w-16'
-				/>
-				<Card
-					Title='Apps'
-					Alt='Apps Card'
-					ImageURL={Apps}
-					CardClass='bg-light-coral gap-10 col-span-1 md:row-span-1'
-					ImageClass='w-16'
-				/>
-				<Card
-					Title='Illustrations'
-					Alt='Illustrations Card'
-					ImageURL={Illustrations}
-					CardClass='bg-coral-pink gap-4 col-span-2'
-					ImageClass='w-32'
-				/>
-				<Card
-					Title='Photography'
-					Alt='Photography Card'
-					ImageURL={Photography}
-					CardClass='bg-turquoise gap-10 col-span-2 lg:col-start-5 lg:row-start-1'
-					ImageClass='w-40'
-				/>
-				<Card
-					Title='Motion Graphics'
-					Alt='Motion Graphics Card'
-					ImageURL={MotionGraphics}
-					CardClass='bg-dark-plum gap-10 col-span-2'
-					ImageClass='w-32'
-				/>
-			</div>
-		</section>
-		<section>
-			<div
-				class='grid gap-6 my-20 mx-4 items-center md:mx-0 md:grid-cols-2 md:mr-10 lg:mx-44 lg:gap-8'>
+	<main>
+		<Container Class='flex flex-col text-center gap-8 md:gap-16 lg:gap-20 '>
+			<section>
+				<div class='mx-4 md:mx-11 lg:mx-44'>
+					<h1
+						class='text-heading-2-25 md:text-heading-2-75 lg:text-heading-3-5'>
+						Design solutions made easy
+					</h1><p
+						class='text-body-1 mt-4 mx-8 text-ash-gray md:text-body-1-125 md:mt-7 md:mx-14 lg:mx-40'>
+						With over ten years of experience in various design
+						disciplines, I’m your one-stop shop for your design
+						needs.
+					</p>
+				</div>
+			</section>
+			<section>
 				<div
-					class='w-[18.75rem] mx-auto md:w-[22.75rem] md:row-span-3 md:-ml-11 lg:ml-0 lg:w-[27.8125rem]'>
-					<Picture
-						src={Avatar}
-						alt='Image of Amy'
+					class='grid gap-6 grid-cols-2 md:grid-cols-4 mx-4 md:mx-11 lg:mx-44 lg:grid-cols-6'>
+					<Card
+						Title='Graphic Design'
+						Alt='Graphic Design Card'
+						ImageURL={GraphicDesign}
+						CardClass='bg-deep-purple gap-24 col-span-2 md:row-span-2'
+						ImageClass='h-48 w-32'
+					/>
+					<Card
+						Title='UI/UX'
+						Alt='UI/UX Card'
+						ImageURL={UIUX}
+						CardClass='bg-burnt-orange gap-10 col-span-1 md:row-span-1'
+						ImageClass='w-16'
+					/>
+					<Card
+						Title='Apps'
+						Alt='Apps Card'
+						ImageURL={Apps}
+						CardClass='bg-light-coral gap-10 col-span-1 md:row-span-1'
+						ImageClass='w-16'
+					/>
+					<Card
+						Title='Illustrations'
+						Alt='Illustrations Card'
+						ImageURL={Illustrations}
+						CardClass='bg-coral-pink gap-4 col-span-2'
+						ImageClass='w-32'
+					/>
+					<Card
+						Title='Photography'
+						Alt='Photography Card'
+						ImageURL={Photography}
+						CardClass='bg-turquoise gap-10 col-span-2 lg:col-start-5 lg:row-start-1'
+						ImageClass='w-40'
+					/>
+					<Card
+						Title='Motion Graphics'
+						Alt='Motion Graphics Card'
+						ImageURL={MotionGraphics}
+						CardClass='bg-dark-plum gap-10 col-span-2'
+						ImageClass='w-32'
 					/>
 				</div>
-				<h2
-					class='text-heading-1-625 self-center md:text-heading-2 md:text-left lg:text-heading-2-5'>
-					I’m Amy, and I’d love to work on your next project
-				</h2>
-				<p
-					class='text-body-1 text-ash-gray self-center md:text-body-1-125 md:text-left'>
-					I love working with others to create beautiful design
-					solutions. I’ve designed everything from brand illustrations
-					to complete mobile apps. I’m also handy with a camera!
-				</p>
-				<div class='md:flex'>
-					<Button
-						type='secondary'
-						,
-						label='Free Consultation'
-					/>
+			</section>
+			<section>
+				<div
+					class='grid gap-6 my-20 mx-4 items-center md:mx-0 md:grid-cols-2 md:mr-10 lg:mx-44 lg:gap-8'>
+					<div
+						class='w-[18.75rem] mx-auto md:w-[22.75rem] md:row-span-3 md:-ml-11 lg:ml-0 lg:w-[27.8125rem]'>
+						<Picture
+							src={Avatar}
+							alt='Image of Amy'
+						/>
+					</div>
+					<h2
+						class='text-heading-1-625 self-center md:text-heading-2 md:text-left lg:text-heading-2-5'>
+						I’m Amy, and I’d love to work on your next project
+					</h2>
+					<p
+						class='text-body-1 text-ash-gray self-center md:text-body-1-125 md:text-left'>
+						I love working with others to create beautiful design
+						solutions. I’ve designed everything from brand
+						illustrations to complete mobile apps. I’m also handy
+						with a camera!
+					</p>
+					<div class='md:flex'>
+						<Button
+							type='secondary'
+							,
+							label='Free Consultation'
+						/>
+					</div>
 				</div>
-			</div>
-		</section>
+			</section>
+		</Container>
 		<section>
 			<Carousel
 				ImageURLs={CarocelImages}
 				client:idle
 			/>
 		</section>
+		<Container>
+			<section>
+				<div
+					class='grid gap-6 mt-24 mx-4 md:mx-11 lg:mx-44 py-12 px-6 bg-jet-black rounded-lg md:py-14 md:px-[4.69rem] lg:grid-cols-3'>
+					<h2
+						class='text-heading-1-625 text-pale-cream md:text-heading-2 text-center lg:col-span-2 lg:text-left lg:text-heading-2-5'>
+						Book a call with me
+					</h2>
+					<p
+						class='text-body-1 text-pale-cream text-center md:text-body-1-125 lg:col-span-2 lg:text-left lg:pr-16'>
+						I’d love to have a chat to see how I can help you. The
+						best first step is for us to discuss your project during
+						a free consultation. Then we can move forward from
+						there.
+					</p>
+					<div
+						class='mx-auto my-auto lg:row-start-1 lg:col-start-3 lg:row-span-2'>
+						<Button
+							type='secondary'
+							,
+							label='Free Consultation'
+						/>
+					</div>
+				</div>
+			</section>
+		</Container>
 	</main>
-	<section>
-		<div
-			class='grid gap-6 mt-24 mx-4 md:mx-11 lg:mx-44 py-12 px-6 bg-jet-black rounded-lg md:py-14 md:px-[4.69rem] lg:grid-cols-3'>
-			<h2
-				class='text-heading-1-625 text-pale-cream md:text-heading-2 text-center lg:col-span-2 lg:text-left lg:text-heading-2-5'>
-				Book a call with me
-			</h2>
-			<p
-				class='text-body-1 text-pale-cream text-center md:text-body-1-125 lg:col-span-2 lg:text-left lg:pr-16'>
-				I’d love to have a chat to see how I can help you. The best
-				first step is for us to discuss your project during a free
-				consultation. Then we can move forward from there.
-			</p>
-			<div
-				class='mx-auto my-auto lg:row-start-1 lg:col-start-3 lg:row-span-2'>
-				<Button
-					type='secondary'
-					,
-					label='Free Consultation'
-				/>
-			</div>
-		</div>
-	</section>
 </Layout>

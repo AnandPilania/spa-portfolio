@@ -1,0 +1,13 @@
+---
+import { cx } from '../utils/classnames';
+
+export type ContainerProps = {
+	Class?: string;
+};
+
+const { Class = '' }: ContainerProps = Astro.props as ContainerProps;
+---
+
+<div class=`${cx(' mx-auto max-w-[1440px]',Class)}`>
+	<slot />
+</div>

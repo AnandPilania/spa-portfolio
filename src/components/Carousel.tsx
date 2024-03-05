@@ -39,7 +39,9 @@ const Carousel = ({ ImageURLs }: CarouselProps) => {
 	return (
 		<>
 			<div className='flex flex-col gap-8 md:gap-14  '>
-				<h2 className='text-heading-1-5 md:text-heading-2'>My Work</h2>
+				<h2 className='text-center text-heading-1-5 md:text-heading-2'>
+					My Work
+				</h2>
 				<div className=' overflow-x-clip '>
 					<div className='flex gap-8 w-auto justify-center'>
 						<img

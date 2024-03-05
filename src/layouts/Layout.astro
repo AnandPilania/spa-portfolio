@@ -9,6 +9,7 @@ import Button from '../components/Button.astro';
 
 // images
 import Logo from '../assets/logo.svg';
+import Container from './Container.astro';
 
 interface Props {
 	title: string;
@@ -40,66 +41,72 @@ const { title } = Astro.props;
 		/>
 		<title>{title}</title>
 	</head>
-	<body
-		class='antialiased max-w-[1440px] mx-auto mt-4 bg-pale-cream text-jet-black'>
+	<body class='antialiased mx-auto mt-4 bg-pale-cream text-jet-black'>
 		<div class='overflow-x-hidden'>
-			<header>
-				<div class='flex justify-between my-8 mx-4 md:mx-11 lg:mx-44'>
-					<Picture
-						src={Logo}
-						alt="Amy's logo"
-						loading='lazy'
-						class='h-12 md:h-16 w-auto'
-					/>
-					<Button
-						type='primary'
-						,
-						label='Free Consultation'
-					/>
-				</div>
-			</header>
+			<Container>
+				<header>
+					<div
+						class='flex justify-between my-8 mx-4 md:my-16 md:mx-11 lg:my-20 lg:mx-44'>
+						<Picture
+							src={Logo}
+							alt="Amy's logo"
+							loading='lazy'
+							class='h-12 md:h-16 w-auto'
+						/>
+						<Button
+							type='primary'
+							,
+							label='Free Consultation'
+						/>
+					</div>
+				</header>
+			</Container>
 			<slot />
-			<footer>
-				<div class='flex justify-between my-8 mx-4 md:mx-11 lg:mx-44'>
-					<Picture
-						src={Logo}
-						alt="Amy's logo"
-						loading='lazy'
-						class='h-12 md:h-16 w-auto'
-					/>
-					<Button
-						type='primary'
-						,
-						label='Free Consultation'
-					/>
-				</div>
-				<div
-					class='h-20 justify-center items-center mb-8 grid grid-cols-2'>
-					<div class='text-center col-span-2 md:col-span-1'>
-						🎯 Challenge by <a
-							class='text-deep-purple text-heading-1'
-							href='https://www.frontendmentor.io?ref=challenge'
-							target='_blank'
-							rel='noopener'
-							>Frontend Mentor</a
-						>.
+			<Container>
+				<footer>
+					<div
+						class='flex justify-between my-8 mx-4 md:my-16 md:mx-11 lg:my-20 lg:mx-44'>
+						<Picture
+							src={Logo}
+							alt="Amy's logo"
+							loading='lazy'
+							class='h-12 md:h-16 w-auto'
+						/>
+						<Button
+							type='primary'
+							,
+							label='Free Consultation'
+						/>
 					</div>
 					<div
-						class='text-center col-span-2 md:col-span-1 md:row-start-2'>
-						👨🏽‍💻 Solution by <a
-							class='text-deep-purple text-heading-1'
-							href='https://www.frontendmentor.io/profile/samilaug'
-							target='_blank'
-							rel='noopener'
-							>Samila Gunarathna</a
-						>.
+						class='h-20 justify-center items-center mb-8 grid grid-cols-2'>
+						<div class='text-center col-span-2 md:col-span-1'>
+							🎯 Challenge by <a
+								class='text-deep-purple text-heading-1'
+								href='https://www.frontendmentor.io?ref=challenge'
+								target='_blank'
+								rel='noopener'
+								>Frontend Mentor</a
+							>.
+						</div>
+						<div
+							class='text-center col-span-2 md:col-span-1 md:row-start-2'>
+							👨🏽‍💻 Solution by <a
+								class='text-deep-purple text-heading-1'
+								href='https://www.frontendmentor.io/profile/samilaug'
+								target='_blank'
+								rel='noopener'
+								>Samila Gunarathna</a
+							>.
+						</div>
+						<div
+							class='text-center col-span-2 md:col-start-2 md:row-span-2'>
+							&copy; {new Date().getFullYear()} Single-page design
+							portfolio.
+						</div>
 					</div>
-					<div
-						class='text-center col-span-2 md:col-start-2 md:row-span-2'>
-						&copy; {new Date().getFullYear()} Single-page design portfolio.
-					</div>
-				</div>
-			</footer>
+				</footer>
+			</Container>
 		</div>
 	</body>
 </html>
