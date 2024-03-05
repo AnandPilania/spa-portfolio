@@ -18,7 +18,7 @@ import Photography from '../assets/pattern-photography.svg';
 import Illustrations from '../assets/pattern-illustrations.svg';
 import MotionGraphics from '../assets/pattern-motion-graphics.svg';
 import Avatar from '../assets/image-amy.webp';
-import Arrow from '../components/Arrow.astro';
+import Arrow from '../components/CarouselImage.astro';
 
 // Carousal images
 import ImageSlide1 from '../assets/image-slide-1.jpg';
@@ -37,20 +37,22 @@ const CarocelImages = [
 ---
 
 <Layout title='Frontend Mentor | Single-page design portfolio'>
-	<main class='flex flex-col gap-8 md:gap-16 text-center'>
+	<main class='flex flex-col text-center gap-8 md:gap-16 lg:gap-20'>
 		<section>
-			<div class='mx-4 md:mx-11'>
-				<h1 class='text-heading-2-25 md:text-heading-2-75'>
+			<div class='mx-4 md:mx-11 lg:mx-44'>
+				<h1
+					class='text-heading-2-25 md:text-heading-2-75 lg:text-heading-3-5'>
 					Design solutions made easy
 				</h1><p
-					class='text-body-1 mt-4 mx-8 text-ash-gray md:text-body-1-125 md:mt-7 md:mx-14'>
+					class='text-body-1 mt-4 mx-8 text-ash-gray md:text-body-1-125 md:mt-7 md:mx-14 lg:mx-40'>
 					With over ten years of experience in various design
 					disciplines, I’m your one-stop shop for your design needs.
 				</p>
 			</div>
 		</section>
 		<section>
-			<div class='grid gap-6 grid-cols-2 md:grid-cols-4 mx-4 md:mx-11'>
+			<div
+				class='grid gap-6 grid-cols-2 md:grid-cols-4 mx-4 md:mx-11 lg:mx-44 lg:grid-cols-6'>
 				<Card
 					Title='Graphic Design'
 					Alt='Graphic Design Card'
@@ -83,7 +85,7 @@ const CarocelImages = [
 					Title='Photography'
 					Alt='Photography Card'
 					ImageURL={Photography}
-					CardClass='bg-turquoise gap-10 col-span-2'
+					CardClass='bg-turquoise gap-10 col-span-2 lg:col-start-5 lg:row-start-1'
 					ImageClass='w-40'
 				/>
 				<Card
@@ -96,20 +98,26 @@ const CarocelImages = [
 			</div>
 		</section>
 		<section>
-			<div class='grid gap-6 my-20 mx-4 md:mx-11'>
-				<Picture
-					src={Avatar}
-					alt='Image of Amy'
-				/>
-				<h2 class='text-heading-1-625'>
+			<div
+				class='grid gap-6 my-20 mx-4 items-center md:mx-0 md:grid-cols-2 md:mr-10 lg:mx-44 lg:gap-8'>
+				<div
+					class='w-[18.75rem] mx-auto md:w-[22.75rem] md:row-span-3 md:-ml-11 lg:ml-0 lg:w-[27.8125rem]'>
+					<Picture
+						src={Avatar}
+						alt='Image of Amy'
+					/>
+				</div>
+				<h2
+					class='text-heading-1-625 self-center md:text-heading-2 md:text-left lg:text-heading-2-5'>
 					I’m Amy, and I’d love to work on your next project
 				</h2>
-				<p class='text-body-1 text-ash-gray'>
+				<p
+					class='text-body-1 text-ash-gray self-center md:text-body-1-125 md:text-left'>
 					I love working with others to create beautiful design
 					solutions. I’ve designed everything from brand illustrations
 					to complete mobile apps. I’m also handy with a camera!
 				</p>
-				<div class='self-center'>
+				<div class='md:flex'>
 					<Button
 						type='secondary'
 						,
@@ -127,16 +135,19 @@ const CarocelImages = [
 	</main>
 	<section>
 		<div
-			class='grid gap-6 mt-24 mx-4 md:mx-11 py-12 px-6 bg-jet-black rounded-lg'>
-			<h2 class='text-heading-1-625 text-pale-cream'>
+			class='grid gap-6 mt-24 mx-4 md:mx-11 lg:mx-44 py-12 px-6 bg-jet-black rounded-lg md:py-14 md:px-[4.69rem] lg:grid-cols-3'>
+			<h2
+				class='text-heading-1-625 text-pale-cream md:text-heading-2 text-center lg:col-span-2 lg:text-left lg:text-heading-2-5'>
 				Book a call with me
 			</h2>
-			<p class='text-body-1 text-pale-cream'>
+			<p
+				class='text-body-1 text-pale-cream text-center md:text-body-1-125 lg:col-span-2 lg:text-left lg:pr-16'>
 				I’d love to have a chat to see how I can help you. The best
 				first step is for us to discuss your project during a free
 				consultation. Then we can move forward from there.
 			</p>
-			<div class='self-center'>
+			<div
+				class='mx-auto my-auto lg:row-start-1 lg:col-start-3 lg:row-span-2'>
 				<Button
 					type='secondary'
 					,
