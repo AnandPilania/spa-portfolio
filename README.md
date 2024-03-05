@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - [Solution Repo](https://github.com/samilaug/single-page-design-portfolio-challenge)
-- [Live Site](https://single-page-design-portfolio-challenge.vercel.app/)
+- [Live Site](https://single-page-design-portfolio-challenge-samilag.vercel.app/)
 
 ## My process
 
