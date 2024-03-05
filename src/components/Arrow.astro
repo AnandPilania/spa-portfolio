@@ -1,0 +1,21 @@
+---
+import { cx } from '../utils/classnames';
+
+export type ArrowButtonProps = {
+	direction: 'left' | 'right';
+};
+
+const { direction }: ArrowButtonProps = Astro.props as ArrowButtonProps;
+---
+
+<div
+	class={cx(
+		'size-16 bg-jet-black text-pale-cream text-button-0-875 rounded-full hover:bg-deep-purple flex',
+	)}>
+	<img
+		class='h-4 m-auto'
+		src={direction === 'left'
+			? '/src/assets/icon-arrow-left.svg'
+			: '/src/assets/icon-arrow-right.svg'}
+	/>
+</div>
