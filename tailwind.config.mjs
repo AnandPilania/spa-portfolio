@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-import defaultTheme from 'tailwindcss/defaultTheme'
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
@@ -39,8 +38,8 @@ export default {
 			'body-1-125': ['1.125rem', { lineHeight: '155.556%', fontWeight: '500' }],
 
 			// button-text
-			'button-0-875': ['0.875rem', { lineHeight: '200%', fontWeight: '700' }],
-			'button-1': ['1rem', { lineHeight: '200%', fontWeight: '700' }],
+			'button-0-875': ['0.875rem', { lineHeight: '175%', fontWeight: '700' }],
+			'button-1': ['1rem', { lineHeight: '175%', fontWeight: '700' }],
 		},
 	},
 	plugins: [],

@@ -35,22 +35,22 @@ const Carousel = ({ ImageURLs }: CarouselProps) => {
 
 	return (
 		<>
-			<div className='flex flex-col gap-8 '>
-				<h2 className='text-heading-1-5'>My Work</h2>
+			<div className='flex flex-col gap-8 md:gap-14  '>
+				<h2 className='text-heading-1-5 md:text-heading-2'>My Work</h2>
 				<div className=' overflow-x-clip '>
-					<div className='flex gap-8 w-auto justify-center '>
+					<div className='flex gap-8 w-auto justify-center'>
 						<img
-							className='h-44 rounded-lg'
+							className='h-44 rounded-lg md:h-[22.5rem]'
 							src={ImageURLs[previousImageIndex]}
 							alt=''
 						/>
 						<img
-							className='h-44 rounded-lg'
+							className='h-44 rounded-lg md:h-[22.5rem]'
 							src={ImageURLs[currantImageIndex]}
 							alt=''
 						/>
 						<img
-							className='h-44 rounded-lg'
+							className='h-44 rounded-lg md:h-[22.5rem]'
 							src={ImageURLs[nextImageIndex]}
 							alt=''
 						/>
