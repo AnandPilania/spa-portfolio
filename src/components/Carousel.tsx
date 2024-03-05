@@ -1,5 +1,8 @@
 import React from 'react';
 
+import LeftArrow from '../assets/icon-arrow-left.svg';
+import RightArrow from '../assets/icon-arrow-right.svg';
+
 type CarouselProps = {
 	ImageURLs: string[];
 };
@@ -62,7 +65,7 @@ const Carousel = ({ ImageURLs }: CarouselProps) => {
 						onClick={goLeft}>
 						<img
 							className='h-4 m-auto'
-							src='/src/assets/icon-arrow-left.svg'
+							src={LeftArrow.src}
 							alt='left-arrow'
 						/>
 					</div>
@@ -71,7 +74,7 @@ const Carousel = ({ ImageURLs }: CarouselProps) => {
 						onClick={goRight}>
 						<img
 							className='h-4 m-auto'
-							src='/src/assets/icon-arrow-right.svg'
+							src={RightArrow.src}
 							alt='right-arrow'
 						/>
 					</div>
